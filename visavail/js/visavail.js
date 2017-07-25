@@ -10,7 +10,7 @@ function visavailChart() {
     bottom: 20,
 
     // left margin should provide space for y axis titles
-    left: 100,
+    left: 100
   };
 
   // height of horizontal data bars
@@ -510,6 +510,18 @@ function visavailChart() {
   chart.width = function (_) {
     if (!arguments.length) return width;
     width = _;
+    return chart;
+  };
+
+  chart.marginLeft = function (_) {
+    if (!arguments.length) return margin.left;
+    margin.left = _;
+    return chart;
+  };
+
+  chart.paddingLeft = function (_) {
+    if (!arguments.length) return paddingLeft;
+    paddingLeft = _;
     return chart;
   };
 
